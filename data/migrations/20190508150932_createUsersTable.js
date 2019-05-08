@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
 
     tbl.string('name', 128).notNullable();
 
-    tbl
+    tbl //foreign key
     .integer('role_id')//..
     .unsigned() //include this because some db ms need it
     .references('id')//primary key in the parent table
